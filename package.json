@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon src/app.js"
+    "start": "nodemon src/app.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
   }
