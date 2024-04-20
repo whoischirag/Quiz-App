@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Node.js Quiz</h1>
+      <br />
+
+      <form id="quiz-form" action="quiz.html">
+        <div class="quiz">
+          Name :
+          <input
+            type="text"
+            id="inputName"
+            placeholder="Enter Your Name."
+          /><br /><br />
+          Email :<input
+            type="text"
+            id="inputEmail"
+            placeholder="Enter Your Email."
+          /><br />
+        </div>
+        <button class="submit-btn">Start Quiz</button>
+      </form>
+
+      <script>
+
+        // HERE WE ARE ADDING VALIDATION TO THE FORM.
+        // THIS WILL ENSURE THAT THE USER SHOULD FILL ALL THE DETAILS BEFORE ENTERING THE QUIZ
+        // NAME AND EMAIL IS TRIMMED AND IF THE VALUES ARE EMPTY IT WILL GIVE AN ALERT TO THE USER AND IF NO ERRORS FORM WILL BE SUBMITTED.
+     
+        document.getElementById("quiz-form").addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          var name = document.getElementById("inputName").value.trim();
+          var email = document.getElementById("inputEmail").value.trim();
+
+          if (name === "" || email === "") {
+            alert(
+              "Name and Email are required. Make sure you fill those before you enter the Quiz!"
+            );
+            return;
+          }
+
+          document.getElementById("quiz-form").submit();
+        });
+      </script>
+    </div>
+  </body>
+</html>
