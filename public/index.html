@@ -39,11 +39,15 @@
 
           var name = document.getElementById("inputName").value.trim();
           var email = document.getElementById("inputEmail").value.trim();
-
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (name === "" || email === "") {
             alert(
               "Name and Email are required. Make sure you fill those before you enter the Quiz!"
             );
+            return;
+          }
+          else if(!emailRegex.test(email)){
+            alert('Please enter a valid Email Address!')
             return;
           }
 
