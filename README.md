@@ -20,7 +20,7 @@ Jump into our Node Quiz App for some easy-breezy fun! It's all about keeping thi
 5. Finally, run the last command to run the app on server 
 `npm start`
 
-after this command the will start and you see a message on your terminal 
+ this command  will start and you see a message on your terminal 
 
 *server is up and running on port 3000*
 
